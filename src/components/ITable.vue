@@ -1,6 +1,6 @@
 <template>
   <div class="table">
-    <table>
+    <table cellspacing="0" cellpadding="0">
       <tr>
         <th v-for="h in heads" :key="h">{{h}}</th>
       </tr>
@@ -30,11 +30,24 @@ export default {
 .table {
   padding: 10px;
   text-align: left;
+  border: none,
+}
+tr:first-child {
+  background-color: rgb(236, 236, 236);
+ 
 }
 th {
   text-align: left;
+  padding: 10px;
 }
-tr {
+th:first-child {
+  border-top-left-radius: 10px;
+}
+th:last-child {
+  border-top-right-radius: 10px;
+}
+td {
   text-align: left;
+  padding: 10px;
 }
 </style>
